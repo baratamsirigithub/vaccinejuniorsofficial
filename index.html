@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vaccine Juniors</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/9.1.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/9.1.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/9.1.0/addons/p5.sound.min.js"></script>
+    <script src="p5.play.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      //add here
+      // Initialize Firebase
+
+  // Import the functions you need from the SDKs you need
+//  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDAdJJizLZAyo4Bjo1SytD_Le5LnZhhYQQ",
+  authDomain: "siriproject-ab5b7.firebaseapp.com",
+  databaseURL: "https://siriproject-ab5b7-default-rtdb.firebaseio.com",
+  projectId: "siriproject-ab5b7",
+  storageBucket: "siriproject-ab5b7.appspot.com",
+  messagingSenderId: "732271556415",
+  appId: "1:732271556415:web:9b6c1badf0f072180a458a"
+};
+firebase.initializeApp(firebaseConfig);
+
+
+  // var firebaseConfig = {
+  //   apiKey: "AIzaSyC9_jSe97kVIbE2z90LZNg5ZtBeKv8UHY4",
+  //   authDomain: "referc35.firebaseapp.com",
+  //   databaseURL: "https://referc35-default-rtdb.firebaseio.com",
+  //   projectId: "referc35",
+  //   storageBucket: "referc35.appspot.com",
+  //   messagingSenderId: "1036412972360",
+  //   appId: "1:1036412972360:web:bcb1c1e01f261dd308577d"
+  // };
+  // firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase
+  //const app = initializeApp(firebaseConfig);
+</script>
+      <!--  -->
+ 
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <style>
+
+      p{
+        text-align: justify;
+        color: rgb(0, 0, 0);
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+    <center>
+    <br><br><br>
+
+    <!-- <div> 
+      <div class="container">
+        <div class="topnav">
+     
+    <ul class="menu">
+      <div class="menu">
+      <ul>
+     <li class="links"><a href="#details">Fill You Details Here</a></li> 
+      <li class="links"><a href="#grd">Choose Grade:</a></li>
+      <li class="links"><a href="#gender">Gender:</a></li>
+      <li class="links"><a href="#vaccination status">Vaccination Status:</a></li>
+      <li class="links"><a href="#covid 19 vaccine type">Covid-19 Vaccine Type:</a></li>
+      <li class="links"><a href="#school">School:</a></li> 
+    </ul> 
+  </div>
+
+  
+</div>
+
+</div> 
+
+  </ul> 
+</div> -->
+
+
+
+</center>
+
+    
+    <script src="sketch.js"></script>
+    <form>
+      
+
+      <h2>Fill You Details Here</h2>
+      <div class="line"></div>
+      <br> <br>
+
+      <!-- <div class="main" id="section1"> -->
+        <!-- <label for="fname">First Name:</label> 
+       
+        <input type="text"  id="fname" > <br> <br>
+    
+        <label for="Lname">Last Name:</label>
+       
+        <input type="text"  id="lname" > <br> <br>
+        <label for="Rno">Register Number:</label>
+       
+        <input type="number" id="rno" > <br> <br>
+            <label for="age">Age:</label>
+         
+            <input type="text" id="age" maxlength="3"> <br> <br> -->
+        
+            <table>
+
+              <table border='0' width='480px' cellpadding='0' cellspacing='0'>
+              <tr>
+               <td>First Name :</td>
+               <td><input type="text" id="fname"></td>
+              </tr>
+              <tr>
+               <td>Last Name :</td>
+               <td><input type="text" id="lname"></td>
+              </tr>
+              <tr>
+                <td>Age:</td>
+                <td><input type="number" id="age"></td>
+               </tr>
+               <tr>
+                <td>Reg No:</td>
+                <td><input type="number" id="rno"></td>
+               </tr>
+              
+              </table>
+            </table>
+
+  <!-- <section id="details"> 
+      <div class="main" id="section1">
+      
+      <input type="text"  id="fname" > <br> <br>
+      <label for="fname">First Name:</label> 
+      
+      <input type="text"  id="fname" > <br> <br>
+      <label for="fname">Last Name:</label>
+      
+      
+      <input type="number" id="rno" > <br> <br>
+      <label for="age">Age:</label>
+     
+      <input type="number"  id="rno" > <br> <br>
+      <label for="Rno">Register Number:</label>
+
+      <input type="text" id="age" maxlength="3"> 
+  </section> -->
+
+  <h3>Choose Grade:</h3>
+<!-- <div class="line"></div> -->
+<br><br>
+      <select id="grd">
+          <option value="Grade 1">Grade 1</option>
+          <option value="Grade 2">Grade 2</option>
+          <option value="Grade 3">Grade 3</option>
+          <option value="Grade 4">Grade 4</option>
+          <option value="Grade 5">Grade 5</option>
+          <option value="Grade 6">Grade 6</option>
+          <option value="Grade 7">Grade 7</option>
+          <option value="Grade 8">Grade 8</option>
+          <option value="Grade 9">Grade 9</option>
+          <option value="Grade 10">Grade 10</option>
+          <option value="Grade 11">Grade 11</option>
+          <option value="Grade 12">Grade 12</option>
+      </select><br> <br><br> <br>
+          
+      
+       <!-- <input type="radio" name="gender" id="male"> 
+     
+       <label for="m">Male</label>
+      
+      <input type="radio" name="Gender" id="female"> 
+    
+      <label for="f">Female</label>   <br> <br> -->
+     
+      <!-- <select id="language">
+        <option value="en" selected>English</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
+      </select> -->
+  <section id="gender">
+    <h3>Gender:</h3>
+    <!-- <div class="line"></div> -->
+    <br>
+    <input type="radio" name="gender" value="Male">Male
+    <br>
+    <input type="radio" name="gender" value="Female">Female
+    <br>
+    <input type="radio" name="gender" value="Others">Others
+    <br><br><br><br>
+  </section>
+    
+  <section id="vaccination status">
+    <h3>Vaccination Status:</h3>
+    <!-- <div class="line"></div> -->
+    <br>
+    <input type="radio" name="Vaccination" value="Vaccinated">Vaccinated
+    <br>
+    <input type="radio" name="Vaccination" value="Unvaccinated">Unvaccinated
+    <br>
+    <input type="radio" name="Vaccination" value="Phase 1">Phase 1
+    <br><br><br><br>
+  </section>
+
+
+  <section id="covid 19 vaccine type">
+    <h3>Covid-19 Vaccine Type:</h3>
+    <!-- <div class="line"></div> -->
+    <br>
+    <input type="radio" name="Vaccine Type" value="Sinopharm">Sinopharm
+    <br>
+    <input type="radio" name="Vaccine Type" value="Pfizer">Pfizer
+    <br>
+    <input type="radio" name="Vaccine Type" value="AstraZeneca">AstraZeneca
+    <br>
+    <input type="radio" name="Vaccine Type" value="Sputnik">Sputnik
+    <br>
+    <input type="radio" name="Vaccine Type" value="Covaxin">Covaxin
+    <br>
+    <input type="radio" name="Vaccine Type" value="Unvaccinated">Unvaccinated
+    <br>
+    <br><br>
+  </section>
+
+  <section id="school">
+    <h3>School:</h3>
+    <!-- <div class="line"></div> -->
+    <br>
+
+    <input type="radio" name="Choose School" value="International Indian School">International Indian School
+    <br>
+    <input type="radio" name="Choose School" value="Delhi Private School Ajman">Delhi Private School
+    <br>
+    <input type="radio" name="Choose School" value="Indian School Ajman">Indian School Ajman
+    <br>
+    <input type="radio" name="Choose School" value="Ajman National School">Ajman National School
+    <br>
+    <input type="radio" name="Choose School" value="Habitat Private School Ajman">Habitat Private School Ajman
+    
+    <br>
+    <input type="radio" name="Choose School" value="Others">Others
+    </section>
+
+
+    
+  
+      
+  <!-- <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p> -->
+  </form>
+  <!-- //<button id="submit" onclick= 'save()'>submit</button> <br> <br> -->
+  </div>
+  <br>
+ <!-- // <button id ="insert()" >INSERT </button> -->
+  <button onclick="INSERT()">INSERT</button>
+  <button onclick="SELECT()">SELECT</button>
+  <button id ="UPDATE" >UPDATE</button>
+  <button id ="DELETE" > DELETE</button> 
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  
+ 
+  </body>
+</html>

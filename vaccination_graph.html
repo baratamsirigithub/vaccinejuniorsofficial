@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA Compatible" content="ie=edge">
+        <title>Vaccination Graph</title>
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <h4>Graph Representation of the Number of Students Vaccination Status</h4>
+        <canvas id="myChart"></canvas>
+
+        
+ 
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                
+                data: {
+                    labels: ['Vaccinated', 'Not Vaccinated', 'Phase 1 Completed'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [452,294,374],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 300)',
+                            'rgba(54, 162, 235, 300)',
+                            'rgba(255, 206, 86, 300)'
+                            
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)'
+                            
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                            
+                        }
+                    }
+                }
+            });
+            </script>
+             
+ 
+ 
+    </body>
+</html>
